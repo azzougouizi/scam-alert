@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>احذر النصب | دليل الوقاية من الاحتيال الإلكتروني</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;800&display=swap">
+<style>
+:root{--bg:#eef3f1;--ink:#10302b;--mute:#4b625d;--card:#fff;--line:#cfdcd8;--brand:#0f7b6c;--brand-ink:#fff;--danger:#c8372d;--warn:#b87400;--ok-bg:#e1f3ee;--bad-bg:#fbe9e7;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0d1d1a;--ink:#e6f1ee;--mute:#9db5af;--card:#142925;--line:#27423d;--brand:#3fc2ac;--brand-ink:#062923;--danger:#ff7b6f;--warn:#f0b64a;--ok-bg:#12372f;--bad-bg:#3a1f1c}}
+:root[data-theme="dark"]{--bg:#0d1d1a;--ink:#e6f1ee;--mute:#9db5af;--card:#142925;--line:#27423d;--brand:#3fc2ac;--brand-ink:#062923;--danger:#ff7b6f;--warn:#f0b64a;--ok-bg:#12372f;--bad-bg:#3a1f1c}
+*{box-sizing:border-box}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:"Tajawal",Tahoma,"Segoe UI",sans-serif;line-height:1.8;font-size:17px}
+button{font:inherit;cursor:pointer}
+:focus-visible{outline:3px solid var(--warn);outline-offset:2px}
+.screen{display:none;min-height:100vh}
+.screen.on{display:block}
+#start{text-align:center;padding:48px 20px 24px;display:none;flex-direction:column;align-items:center;justify-content:space-between}
+#start.on{display:flex}
+.shield{width:150px;height:170px;margin:0 auto 8px}
+h1{font-size:clamp(2.2rem,8vw,3.6rem);line-height:1.2;margin:12px 0;font-weight:800}
+.lead{max-width:30rem;color:var(--mute);margin:0 auto 28px}
+.go{background:var(--brand);color:var(--brand-ink);border:0;border-radius:14px;padding:16px 64px;font-size:1.4rem;font-weight:800}
+.go:active{transform:scale(.97)}
+.credit{margin:48px 0 0;color:var(--mute);font-size:.95rem;border-top:1px solid var(--line);padding-top:14px;width:100%;max-width:30rem}
+.credit b{color:var(--ink)}
+header.top{position:sticky;top:env(safe-area-inset-top,0px);background:var(--bg);z-index:5;padding:12px 16px;display:flex;align-items:center;gap:12px;border-bottom:1px solid var(--line)}
+header.top h2{margin:0;font-size:1.2rem;flex:1}
+.back{background:none;border:1px solid var(--line);color:var(--ink);border-radius:10px;padding:6px 14px}
+main{max-width:46rem;margin:0 auto;padding:16px}
+.intro{color:var(--mute);margin:4px 0 16px}
+.filters{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:16px}
+.chip{border:1px solid var(--line);background:var(--card);color:var(--ink);border-radius:99px;padding:4px 16px}
+.chip[aria-pressed="true"]{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+.item{background:var(--card);border:1px solid var(--line);border-radius:16px;margin-bottom:14px;overflow:hidden}
+.item>button{all:unset;box-sizing:border-box;display:flex;width:100%;gap:14px;align-items:center;padding:0;cursor:pointer}
+.item>button:focus-visible{outline:3px solid var(--warn);outline-offset:-3px}
+.pic{width:92px;align-self:stretch;min-height:92px;display:grid;place-items:center;font-size:2.6rem;flex:none}
+.hd{padding:10px 0;flex:1}
+.hd strong{display:block;font-size:1.15rem;line-height:1.4}
+.tag{font-size:.85rem;font-weight:500}
+.tag.hi{color:var(--danger)}.tag.md{color:var(--warn)}
+.arr{padding:0 16px;transition:transform .2s}
+.item.open .arr{transform:rotate(180deg)}
+.body{display:none;padding:4px 18px 18px;border-top:1px solid var(--line)}
+.item.open .body{display:block}
+.body h3{font-size:1rem;margin:14px 0 4px}
+.body p,.body ul{margin:0}
+.body ul{padding-inline-start:20px}
+.prob{background:var(--bad-bg);border-radius:12px;padding:10px 14px;margin-top:12px}
+.sol{background:var(--ok-bg);border-radius:12px;padding:10px 14px;margin-top:12px}
+.prob h3,.sol h3{margin-top:0}
+.rules{background:var(--ink);color:var(--bg);border-radius:16px;padding:18px 22px;margin:24px 0}
+.rules h2{margin:0 0 8px;font-size:1.2rem}
+.rules li{margin-bottom:4px}
+footer{text-align:center;color:var(--mute);padding:16px 16px 40px;font-size:.95rem}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}}
+</style>
+</head>
+<body>
+
+<section id="start" class="screen on">
+  <div>
+    <svg class="shield" viewBox="0 0 150 170" role="img" aria-label="درع حماية">
+      <path d="M75 8 138 32v56c0 40-27 66-63 76C39 154 12 128 12 88V32z" fill="var(--brand)"/>
+      <path d="M75 24 124 42v46c0 31-20 52-49 61-29-9-49-30-49-61V42z" fill="var(--bg)"/>
+      <path d="M52 86l17 17 31-36" fill="none" stroke="var(--brand)" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+    <h1>احذر النصب</h1>
+    <p class="lead">دليل عملي يعرّفك بأشهر طرق الاحتيال عبر المواقع والتطبيقات، وكيف تكتشفها وتحمي نفسك منها.</p>
+    <button class="go" id="goBtn">ابدأ</button>
+  </div>
+  <p class="credit">هذا التطبيق من إعداد <b>عبد العزيز</b></p>
+</section>
+
+<section id="guide" class="screen">
+  <header class="top">
+    <button class="back" id="backBtn">رجوع</button>
+    <h2>أنواع الاحتيال وطرق الوقاية</h2>
+  </header>
+  <main>
+    <p class="intro">اضغط على أي بطاقة لترى وصف الحالة، وكيف تحدث المشكلة، وما الحل.</p>
+    <div class="filters" id="filters" role="group" aria-label="تصفية حسب الخطورة"></div>
+    <div id="list"></div>
+    <div class="rules">
+      <h2>قواعد ذهبية تحميك دائمًا</h2>
+      <ul>
+        <li>لا تشارك رمز التحقق (OTP) أو كلمة المرور أو بيانات البطاقة مع أي أحد، مهما كانت صفته.</li>
+        <li>أي عرض مغرٍ أو مستعجل يستدعي التوقف والتحقق.</li>
+        <li>افتح المواقع الرسمية بنفسك بدل الضغط على الروابط المرسلة.</li>
+        <li>فعّل التحقق بخطوتين على جميع حساباتك المهمة.</li>
+        <li>حدّث هاتفك وتطبيقاتك، ولا تثبّت تطبيقات من خارج المتاجر الرسمية.</li>
+        <li>إذا وقعت ضحية: اقطع الاتصال، غيّر كلمات المرور، أبلغ البنك فورًا، واحتفظ بالأدلة وقدّم بلاغًا للجهات المختصة.</li>
+      </ul>
+    </div>
+  </main>
+  <footer>هذا التطبيق من إعداد عبد العزيز</footer>
+</section>
+
+<script>
+var D=[
+{t:"التصيّد الاحتيالي (Phishing)",i:"🎣",c:"#fbe3df",r:"hi",
+ s:"تصلك رسالة بريد أو SMS تبدو من البنك أو شركة معروفة تقول إن حسابك سيُغلق، وفيها رابط لـ«تأكيد بياناتك».",
+ p:"الرابط يفتح صفحة مزيفة تشبه الأصلية تمامًا، وما تكتبه فيها من اسم مستخدم وكلمة مرور يصل مباشرة للمحتال.",
+ g:["رابط يختلف حرفًا عن العنوان الرسمي","تهديد بإغلاق الحساب أو مهلة قصيرة","أخطاء لغوية أو تحية عامة بلا اسمك"],
+ f:["لا تضغط على الرابط، وافتح التطبيق أو الموقع الرسمي بنفسك","تواصل مع البنك عبر رقمه الرسمي","فعّل التحقق بخطوتين، وغيّر كلمة المرور فورًا إذا أدخلت بياناتك"]},
+{t:"المتاجر الإلكترونية الوهمية",i:"🛒",c:"#fdecc8",r:"md",
+ s:"تجد إعلانًا لهاتف أو سيارة بسعر أقل بكثير من السوق على موقع أو صفحة تواصل اجتماعي لا تعرفها.",
+ p:"تدفع مقدمًا أو تعطي بيانات بطاقتك، ثم لا تصل السلعة أو تُسرق بيانات البطاقة وتُستعمل في عمليات أخرى.",
+ g:["سعر مبالغ في رخصه","لا توجد وسيلة دفع عند الاستلام","موقع حديث بلا تقييمات حقيقية أو عنوان واضح"],
+ f:["اشترِ من متاجر معروفة وابحث عن آراء حقيقية خارج الموقع نفسه","فضّل الدفع عند الاستلام أو بطاقة افتراضية برصيد محدود","تأكد من قفل HTTPS، لكنه وحده لا يكفي"]},
+{t:"الجوائز والسحوبات الكاذبة",i:"🎁",c:"#e9e2fa",r:"md",
+ s:"رسالة تهنئك بربح هاتف أو مبلغ مالي في سحب لم تشارك فيه، وتطلب رسومًا «لتسليم الجائزة».",
+ p:"بعد دفع الرسوم الأولى يطلبون رسومًا جديدة مرة بعد مرة، أو يسحبون بياناتك الشخصية ليبيعوها.",
+ g:["ربح بلا مشاركة","طلب دفع مقابل جائزة مجانية","طلب بيانات حساسة للتسليم"],
+ f:["تجاهل الرسالة واحذفها","لا تدفع أي مبلغ لاستلام جائزة","أبلغ المنصة عن الحساب المرسل"]},
+{t:"الاستثمار والعملات الرقمية الوهمية",i:"📈",c:"#dff1e6",r:"hi",
+ s:"شخص أو إعلان يعدك بأرباح يومية مضمونة وكبيرة من التداول أو العملات الرقمية، مع لقطات شاشة لأرباح مزعومة.",
+ p:"تُظهر لك المنصة أرباحًا وهمية لتودع مبالغ أكبر، وعند السحب تُطلب رسوم أو تختفي المنصة بأموالك.",
+ g:["أرباح مضمونة بلا مخاطر","ضغط للإيداع السريع","منصة غير مرخصة أو شهادات مزورة"],
+ f:["لا استثمار خارج جهات مرخصة ومعروفة","تذكّر: لا ربح مضمون في الاستثمار","لا تودع أكثر مما تتحمل خسارته، وأبلغ عن المنصة"]},
+{t:"النصب العاطفي",i:"💔",c:"#fbe0ea",r:"hi",
+ s:"يتعرف عليك شخص عبر الإنترنت، يبني علاقة عاطفية سريعة، ثم يختلق أزمة طارئة ويطلب مالًا.",
+ p:"يستغل المحتال مشاعرك ليطلب تحويلات متكررة، وقد يهدد بنشر محادثاتكما لاحقًا.",
+ g:["لا يظهر أبدًا بمكالمة فيديو","يقول إنه مسافر أو عالق ويحتاج مالًا","يستعجل الحب والثقة"],
+ f:["لا ترسل مالًا لشخص لم تلتقِ به","اطلب مكالمة فيديو، وابحث عن صوره عبر البحث العكسي","استشر صديقًا مقربًا قبل أي قرار مالي"]},
+{t:"الدعم الفني المزيف وسرقة رمز التحقق",i:"☎️",c:"#dcebfb",r:"hi",
+ s:"يتصل بك شخص يدّعي أنه من البنك أو الدعم الفني، ويقول إن حسابك مخترق ويطلب رمزًا وصل لهاتفك.",
+ p:"الرمز هو مفتاح حسابك. بمجرد إعطائه يسحبون أموالك أو يسيطرون على حسابك.",
+ g:["اتصال غير متوقع","طلب رمز أو كلمة مرور أو تثبيت برنامج تحكم عن بعد","نبرة مستعجلة ومخيفة"],
+ f:["لا تعطِ الرمز لأي شخص، فالبنك لا يطلبه أبدًا","أنهِ المكالمة واتصل بالبنك على رقمه الرسمي","لا تثبّت برامج التحكم عن بعد بطلب من متصل"]},
+{t:"اختراق حسابات واتساب والتواصل",i:"💬",c:"#d9f2e2",r:"hi",
+ s:"يصلك من صديق «اختراق» رمز من 6 أرقام بالخطأ ويطلب منك إرساله، أو رابط مشبوه من جهة معروفة.",
+ p:"الرمز يسمح بتسجيل حسابك على جهاز آخر، فيراسلون جهات اتصالك ويطلبون منهم مالًا باسمك.",
+ g:["طلب رمز تحقق من شخص آخر","رسالة مالية مفاجئة من صديق","رابط غريب لتصويت أو مسابقة"],
+ f:["لا ترسل رمز التحقق لأحد","فعّل التحقق بخطوتين داخل التطبيق","إن سُرق حسابك فسجّل الدخول من جديد وأخبر جهات اتصالك"]},
+{t:"عروض العمل الوهمية",i:"💼",c:"#f5e8d3",r:"md",
+ s:"وظيفة براتب مرتفع من المنزل بلا خبرة، وتُطلب منك رسوم تسجيل أو شراء معدات أو بيانات هويتك.",
+ p:"يأخذون الرسوم ويختفون، أو يستعملون وثائقك في الاحتيال، أو يستخدمون حسابك لتحويل أموال مشبوهة.",
+ g:["دفع مقابل الحصول على وظيفة","مقابلة عبر الدردشة فقط","إغراء براتب كبير بلا مؤهلات"],
+ f:["الشركات الجادة لا تطلب رسومًا من المتقدم","تأكد من الشركة عبر موقعها الرسمي","لا ترسل صورة الهوية قبل التأكد، ولا تستقبل أموالًا لتحويلها"]},
+{t:"التطبيقات الخبيثة وملفات APK",i:"📱",c:"#e3e3f2",r:"hi",
+ s:"تطبيق «مجاني» لمشاهدة المباريات أو تعديل الصور يُحمَّل من رابط خارج المتجر الرسمي.",
+ p:"قد يحتوي على برمجية تتجسس على رسائلك وصورك أو تقرأ رموز التحقق وتسحب أموالك.",
+ g:["تطلب أذونات كثيرة لا يحتاجها","تحميل من رابط مباشر","تقييمات قليلة أو مزيفة"],
+ f:["ثبّت التطبيقات من المتاجر الرسمية فقط","راجع الأذونات، وامنع ما لا يلزم","استخدم برنامج حماية، وإن أصبت فأعد ضبط الهاتف وغيّر كلمات المرور"]},
+{t:"شبكات الواي فاي العامة",i:"📶",c:"#d8eef1",r:"md",
+ s:"في مقهى أو مطار تتصل بشبكة مجانية بنفس اسم المكان وتفتح حسابك البنكي.",
+ p:"قد تكون الشبكة مزيفة أو مراقبة، فتُسرق بياناتك أثناء مرورها.",
+ g:["شبكة مفتوحة بلا كلمة مرور","اسم مشابه لاسم الشبكة الرسمية","صفحة تسجيل تطلب بيانات كثيرة"],
+ f:["تجنب العمليات المصرفية على الشبكات العامة","استخدم بيانات الهاتف أو VPN موثوقًا","اسأل العاملين عن اسم الشبكة الصحيح، وعطّل الاتصال التلقائي"]},
+{t:"التبرعات الكاذبة",i:"🤲",c:"#fbe7d9",r:"md",
+ s:"نداء مؤثر لمساعدة مريض أو منكوب مع رقم حساب، ينتشر على مواقع التواصل.",
+ p:"قصة مختلقة أو صور مسروقة تُستعمل لجمع أموال المتبرعين لحساب شخصي للمحتال.",
+ g:["لا توجد جهة رسمية","صور تتكرر في حسابات مختلفة","ضغط عاطفي مع حساب شخصي"],
+ f:["تبرّع عبر جمعيات مرخصة ومعروفة","تحقق من القصة من مصادر مستقلة","أبلغ عن المنشور المشبوه"]},
+{t:"الابتزاز الإلكتروني",i:"🔒",c:"#f1dfe3",r:"hi",
+ s:"يهددك شخص بنشر صور أو محادثات خاصة إن لم تدفع له مبلغًا أو تنفّذ طلباته.",
+ p:"الدفع لا ينهي الابتزاز بل يزيده، وقد تكون الصور أحيانًا مفبركة أو مسروقة من حسابك.",
+ g:["تهديد بالنشر","مهلة قصيرة للدفع","طلب مزيد بعد كل استجابة"],
+ f:["لا تدفع ولا تستجب، واحتفظ بالمحادثات كدليل","احظر الحساب وأبلغ المنصة","قدّم بلاغًا للجهات المختصة، وأخبر شخصًا تثق به، فالضحية ليست مذنبة"]},
+{t:"رسائل التوصيل والغرامات المزيفة",i:"📦",c:"#e8f0d6",r:"md",
+ s:"رسالة تقول إن طردك معلّق أو عليك غرامة مرورية، وتطلب دفع مبلغ صغير عبر رابط.",
+ p:"المبلغ الصغير ذريعة لجمع بيانات بطاقتك الكاملة، ثم تُسحب منها مبالغ أكبر.",
+ g:["لا تنتظر طردًا فعلًا","رابط غير رسمي","مبلغ صغير مع مهلة قصيرة"],
+ f:["تتبّع الشحنة من الموقع الرسمي للشركة","لا تدخل بيانات البطاقة عبر رابط وصلك","إن أدخلتها فاتصل بالبنك لإيقاف البطاقة فورًا"]}
+];
+var L={hi:"خطورة عالية",md:"خطورة متوسطة"},cur="all";
+function $(i){return document.getElementById(i)}
+function show(id){document.querySelectorAll(".screen").forEach(function(s){s.classList.remove("on")});$(id).classList.add("on");window.scrollTo(0,0)}
+function li(a){return"<ul>"+a.map(function(x){return"<li>"+x+"</li>"}).join("")+"</ul>"}
+function render(){
+ $("list").innerHTML=D.map(function(d,k){
+  if(cur!=="all"&&d.r!==cur)return"";
+  return '<article class="item"><button aria-expanded="false" data-k="'+k+'"><div class="pic" style="background:'+d.c+'" aria-hidden="true">'+d.i+'</div><div class="hd"><strong>'+d.t+'</strong><span class="tag '+d.r+'">'+L[d.r]+'</span></div><span class="arr" aria-hidden="true">▾</span></button>'+
+  '<div class="body"><h3>وصف الحالة</h3><p>'+d.s+'</p><div class="prob"><h3>كيف تحدث المشكلة؟</h3><p>'+d.p+'</p></div><h3>علامات تنبهك</h3>'+li(d.g)+'<div class="sol"><h3>الحل والوقاية</h3>'+li(d.f)+'</div></div></article>';
+ }).join("");
+}
+function chips(){
+ var o=[["all","الكل"],["hi","خطورة عالية"],["md","خطورة متوسطة"]];
+ $("filters").innerHTML=o.map(function(x){return'<button class="chip" data-f="'+x[0]+'" aria-pressed="'+(cur===x[0])+'">'+x[1]+'</button>'}).join("");
+}
+$("goBtn").onclick=function(){show("guide")};
+$("backBtn").onclick=function(){show("start")};
+$("filters").onclick=function(e){var b=e.target.closest("[data-f]");if(!b)return;cur=b.dataset.f;chips();render()};
+$("list").onclick=function(e){var b=e.target.closest("[data-k]");if(!b)return;var it=b.parentNode,o=it.classList.toggle("open");b.setAttribute("aria-expanded",o)};
+chips();render();
+</script>
+</body>
+</html>
